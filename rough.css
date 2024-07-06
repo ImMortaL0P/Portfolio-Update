@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.container{
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5px 5px;
+    background:rgba(128, 128, 128, 0.278);
+}
+
+.container:hover .logo-slides{
+    animation-play-state: paused;
+}
+
+.logo-slides{
+    display: inline-block;
+    animation: 15s slide infinite linear;
+}
+
+.logo-slides ul{
+    display: flex;
+    gap: 40px;
+    margin: 0px 20px;
+    color: white;
+    font-weight: 300;
+    list-style-type: none;
+}
